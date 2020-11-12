@@ -15,8 +15,8 @@ const info = require("./lib/info.js");
 /////////////////
 const BotName = 'Putra_Prawangsa'; 
 const instagram = 'https://instagram.com/prawangsaputra'; 
-const telegram = 'Tidak P'; 
-const kapanbotaktif = '24 JAM'; 
+const telegram = 'Tidak Punya'; 
+const kapanbotaktif = '24 JAM OFFLINE ~SIBUK  !!!~'; 
 const youtube = 'Tidak Punya';
 //const grupch1 = 'belum ada grup'; 
 //const grupch2 = 'belum ada grup' ; 
@@ -49,7 +49,7 @@ conn.on('qr', qr =>
    {
       small: true
    });
-   console.log(`[ ${moment().format("HH:mm:ss")} ] Scan kode qr dengan whatsapp!`);
+   console.log(`[ ${moment().format("HH:mm:ss")} ] QR MU CUKK !!!`);
 });
 
 conn.on('credentials-updated', () =>
@@ -64,11 +64,11 @@ fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
 //conn.connectOptions.agent = ProxyAgent ('http://1.0.180.120:8080')
 conn.connect();
 
-conn.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log('Bot by ig:@mwmaulana310')
+conn.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log('Bot by Putra_Prawangsa')
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by ig:@mwmaulana310`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by Putra_Prawangsa`)
 })
 
 conn.on('message-new', async(m) =>
@@ -451,68 +451,6 @@ const get = require('got')
             );
 
          });
-   }
-   else if (text.includes("!nama ")) 
-  {
-    const cheerio = require('cheerio');
-    const request = require('request');
-    var nama = text.split("!nama ")[1];
-    var req = nama.replace(/ /g,"+");
-    request.get({
-        headers: {'content-type' : 'application/x-www-form-urlencoded'},
-        url:     'http://www.primbon.com/arti_nama.php?nama1='+ req +'&proses=+Submit%21+',
-      },function(error, response, body){
-          let $ = cheerio.load(body);
-          var y = $.html().split('arti:')[1];
-          var t = y.split('method="get">')[1];
-          var f = y.replace(t ," ");
-          var x = f.replace(/<br\s*[\/]?>/gi, "\n");
-          var h  = x.replace(/<[^>]*>?/gm, '');
-      console.log(""+ h);
-      conn.sendMessage(id,
-            `
-      Halo *${id.split("@s.whatsapp.net")[0]}*
-      Arti dari namamu adalah
-
-  ***********************************
-         Nama _*${nama}*_ ${h}
-  ***********************************
-
-`,
- MessageType.text);
-  });
-  }
-  else if (text.includes("!pasangan ")) {
-    const request = require('request');
-    var gh = text.split("!pasangan ")[1];
-    var namamu = gh.split("&")[0];
-    var pasangan = gh.split("&")[1];
-    request.get({
-        headers: {'content-type' : 'application/x-www-form-urlencoded'},
-        url:     'http://www.primbon.com/kecocokan_nama_pasangan.php?nama1='+ namamu +'&nama2='+ pasangan +'&proses=+Submit%21+',
-
-    },function(error, response, body){
-        let $ = cheerio.load(body);
-      var y = $.html().split('<b>KECOCOKAN JODOH BERDASARKAN NAMA PASANGAN</b><br><br>')[1];
-        var t = y.split('.<br><br>')[1];
-        var f = y.replace(t ," ");
-        var x = f.replace(/<br\s*[\/]?>/gi, "\n");
-        var h  = x.replace(/<[^>]*>?/gm, '');
-        var d = h.replace("&amp;", '&')
-      console.log(""+ d);
-      conn.sendMessage(id, `
-
-************************************
-
- *Kecocokan berdasarkan nama*
-
-
- ${d}
-
-
-************************************
-    `, MessageType.text);
-  });
   }
    if (text.includes("!pict cewek"))
    {
