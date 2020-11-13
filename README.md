@@ -1,4 +1,4 @@
-## BETA-BOT
+## Putra_Prawangsa
 BOT WHATSAPP YANG BISA DIGUNAKAN DI TERMUX
 
 
@@ -41,15 +41,14 @@ BOT WHATSAPP YANG BISA DIGUNAKAN DI TERMUX
 |       ✅       | ARTI NAMA                         |
 |       ✅       | SHOLAT                            |
 |       ✅       | QURAN                             |
-|       ✅       | KAMING SUN                        |
+|       123      | TUNGGU YA!                        |
 
 ket : ✅ : aktif
 
 
 
-
-## THANKS TO
-* [`termux-whatsapp-bot`](https://github.com/fdciabdul/termux-whatsapp-bot)
-* [`botst4rz`](https://github.com/Bintang73/botst4rz)
 ## DONASI
-* [`Saweria`](https://saweria.co/Mwmaulana310)
+* VIA DANA: 087753210611
+* VIA OVO: 083115421180
+
+   *TERIMA KASIH*
