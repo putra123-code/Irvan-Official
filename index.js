@@ -13,8 +13,8 @@ const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
 /////////////////
-const BotName = 'Putra_Prawangsa'; 
-const instagram = 'https://instagram.com/prawangsaputra'; 
+const BotName = 'Irvan Official'; 
+const instagram = 'https://instagram.com/irvan_adip_'; 
 const telegram = 'Tidak Punya'; 
 const kapanbotaktif = '24 JAM OFFLINE ~SIBUK  !!!~'; 
 const youtube = 'Tidak Punya';
